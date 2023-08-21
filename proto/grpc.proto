@@ -1,0 +1,19 @@
+syntax="proto3";
+
+
+package grpc;
+
+service RegisterData {
+    rpc Register (RegisterRequest) returns (RegisterResponse) {}
+}
+
+message RegisterRequest {
+    string name = 1;
+    string email = 2;
+    string password = 3;
+}
+
+message RegisterResponse {
+    string message = 1;
+    string data = 2;
+}
