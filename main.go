@@ -39,7 +39,10 @@ func main() {
 		panic(err)
 	}
 
+	// Create a new gRPC server
 	s := grpc.NewServer()
+
+	// Register the RegisterData server
 	pb.RegisterRegisterDataServer(s, &server{})
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
