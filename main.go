@@ -10,6 +10,7 @@ import (
 )
 
 func main() {
+	// for listen port
 	lis, err := net.Listen("tcp", ":8080")
 	fmt.Println("Server running on port :8080")
 	if err != nil {
